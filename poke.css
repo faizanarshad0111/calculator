@@ -1,195 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(20,20,20);
-    text-align: center;
     font-family: 'Piazzolla', serif;
-    color: white;
-    font-size: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
 }
 
-h4 {
-    font-size: 16px;
-    margin: 0;
-}
-
-label {
-    font-family: 'Piazzolla', serif;
-    font-weight: bolder;
-    font-size: 25px;
-}
-
-.picpok {
-    width:  150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.picpokShiny {
-    width:  288px;
-    height: 288px;
-    object-fit: cover;
-}
-
-.pictype {
-    width: 89px;
-    height: 39px;
-}
-
-.button {
-    margin: 0px;
-    font-size: 20px;
-}
-
+/* Header */
 h1 {
-    margin:0;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+    color: #4CAF50;
 }
 
-h2 {
-    font-weight: 400;
-    margin: 0;
-    padding-bottom: 14px;
-    height: 20px;
+/* Text Section */
+#text {
+    max-width: min(900px, 90%);
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-h3 {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 0;
+#text a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.shinies {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-#FP1 {
-    padding-bottom:4px;
-}
-
-#FP2 {
-    padding-bottom:4px;
-}
-
-#R2 {
-    height: 30px;
-}
-
-#L2 {
-    height: 30px;
-}
-
-#bottom {
-    font-family: 'Arial', serif;
-    font-size: 12px;
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    text-align: center
-}
-
-.monstats {
-    padding-bottom: 2px;
-}
-
-.montotal {
-    padding-bottom: 10px;
-}
-
-.monab {
-    padding-bottom: 8px;
-}
-
-.monweak {
-    vertical-align: auto;
-    padding-bottom: 4px;
-}
-
-.monweak img {
-    width: 52px;
-    height: 22px;
+#text a:hover {
+    text-decoration: underline;
 }
 
 .green-text {
-    color: green;
+    color: #4CAF50;
+    font-weight: bold;
 }
 
 .red-text {
-    color: red;
+    color: #F44336;
+    font-weight: bold;
 }
 
-a:link {
-    color:rgb(30,130,230);
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  
-  a:visited {
-    color:darkorchid;
-    background-color: transparent;
-  }
-  
-  a:active {
-    color:darkorchid;
-    background-color: transparent;
-    text-decoration: dashed;
-  }
+/* Calculator Section */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
 
-  input {
-    font-size: inherit;
-    font-family: inherit;
-  }
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
 
-/* MOBILE STYLE */
-@media only screen and (max-width: 425px) {
-    .calculator {
-        padding: 1rem;
+.inputs label {
+    font-weight: bold;
+    color: #555;
+}
+
+.inputs input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    width: min(200px, 100%);
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: background-color 0.3s ease;
+}
+
+img {
+    width: clamp(40px, 8vw, 60px);
+    height: auto;
+    aspect-ratio: 2/1;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 30px);
+    margin-top: 30px;
+    width: 100%;
+}
+
+#L2, #R2 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: clamp(10px, 3vw, 20px);
+    text-align: center;
+    width: min(500px, 95%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.picpok {
+    width: min(150px, 100%);
+    height: auto;
+    aspect-ratio: 5/4;
+}
+
+.monstats, .montotal, .monab, .monhab, .monweak {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin: 5px 0;
+}
+
+.montotal {
+    font-weight: bold;
+    color: #333;
+}
+
+.monweak {
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
     }
 
-    .calculator>*+* {
-        margin-top: 0.5rem;
-    }
-
-    .calculator input {
-        box-sizing: border-box;
-        padding   : 0.5rem;
-        width     : 100%;
-    }
-
-    .inputs>* {
-        display: block;
-    }
-
-    .inputs>*+* {
-        margin-top: 0.5rem;
+    .inputs {
+        flex-direction: column;
     }
 
     .buttons {
-        display  : flex;
-        flex-flow: row nowrap;
-        gap      : 0.5rem;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .buttons>* {
-        flex: 1 1 33%;
-    }
-
-    #stats {
-        font-size: 0.9rem;
-    }
-
-    #shinies {
-        grid-template-columns: 1fr;
+    .button {
+        width: 100%;
+        max-width: 200px;
     }
 }
 
-#button {
-    background: rgb(100,154,255);
-    background: linear-gradient(180deg, rgba(100,154,255,1) 0%, rgba(69,65,185,1) 100%);
-    border-color: rgb(100,154,255);
-    font-weight: bold;
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
 }
