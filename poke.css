@@ -136,7 +136,7 @@ img {
 }
 
 .picpok {
-    width: min(150px, 100%);
+    width: min(170px, 100%);
     height: auto;
     aspect-ratio: 5/4;
 }
