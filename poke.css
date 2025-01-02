@@ -69,9 +69,10 @@ h1 {
     width: 100%;
 }
 
+#t2{    margin-right: 20px;}
 .inputs label {
     font-weight: bold;
-    color: #555;
+    color: white;
 }
 
 .inputs input[type="text"] {
@@ -83,15 +84,17 @@ h1 {
 }
 
 .button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
+    padding: 13px 47px;
+    background-color: #DDF247;
+    color: black;
+    border: 4px;
     border-radius: 5px;
     cursor: pointer;
     font-size: clamp(0.9rem, 2vw, 1rem);
     transition: background-color 0.3s ease;
+    font-weight: 900;
 }
+
 
 img {
     width: clamp(40px, 8vw, 60px);
@@ -123,7 +126,7 @@ img {
 }
 
 #L2, #R2 {
-    background-color: #fff;
+    background-color: #A6AEBF;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: clamp(10px, 3vw, 20px);
