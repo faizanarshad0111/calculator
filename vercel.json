@@ -9,7 +9,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'self' https://demo.arcodeq.com/"
+          "value": "frame-ancestors 'self' https://www.pokemons-infinite-fusion-calculator.com/"
         }
       ]
     }
