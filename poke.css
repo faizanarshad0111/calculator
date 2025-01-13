@@ -72,7 +72,7 @@ h1 {
 #t2{    margin-right: 20px;}
 .inputs label {
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .inputs input[type="text"] {
